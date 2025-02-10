@@ -28,7 +28,7 @@ body {
 
 .fs-500 {
   font-size: 1.3125rem;
-  margin: 0;
+  margin: 0.5em;
 }
 
 .container {
@@ -69,19 +69,19 @@ body {
 .plans {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 2em 0;
 }
 
 .plan {
-  width: 200px;
   padding: 2em;
   border-radius: 1em;
-  margin: 0 0.5em;
 }
 
 .plan--light {
   color: #4e4e4e;
   background: linear-gradient(-45deg, #e5e3e8, #fafafa);
+  border-radius: 1em 0 0 1em;
 }
 
 .plan--light .plan__price {
@@ -96,11 +96,18 @@ body {
 .plan--accent {
   color: #fff;
   background: linear-gradient(-45deg, #00a1ab, #3741a0);
+  padding: 4em 2em;
 }
 
 .plan--accent .button {
   background: white;
   color: #4e4e4e;
+}
+
+.plan--dark {
+  color: white;
+  background: #4e4e4e;
+  border-radius: 0 1em 1em 0;
 }
 
 .plan__title {
@@ -124,11 +131,16 @@ body {
 .plan__description {
   margin: 2em 0;
   line-height: 1.5;
+  width: 23ch;
 }
 
 /* ///////////////
   Teams
   ////////////// */
+
+.team .container {
+  max-width: 1120px;
+}
 
 .team-members {
   display: flex;
@@ -136,17 +148,47 @@ body {
 }
 
 .team-member {
-  background: #abc;
   text-align: left;
-  flex: 1 1 45%;
-  margin: 1em;
   display: flex;
-  border-radius: 0.5em;
-  align-items: center;
-  padding: 0.5em 2em 0.5em 0.5em;
+  width: 52ch;
+  border-radius: 0.75em;
+  margin: 1.8em;
+}
+
+.team-member .info {
+  margin: 0 1em;
+}
+
+.team-member p {
+  width: 22ch;
+  line-height: 1.5em;
 }
 
 .team-member img {
   width: 10rem;
-  border-radius: 0.25em;
+  border-radius: 0.75em;
+  margin: 0.75em;
+}
+
+.team-member .name {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+.team-member .position {
+  margin-top: 0;
+}
+
+.team-member--light {
+  background: linear-gradient(-45deg, #e5e3e8, #fafafa);
+  color: #4e4e4e;
+}
+
+.team-member--light .name {
+  color: #00a1ab;
+}
+
+.team-member--dark {
+  background: #4e4e4e;
+  color: white;
 }
